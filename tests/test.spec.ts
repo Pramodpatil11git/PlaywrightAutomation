@@ -11,6 +11,8 @@ test('Open browser', async({page})=>{
     await page.locator('#login-button').click();
     const swagLabsText = page.locator('.app_logo');
     await expect(swagLabsText).toHaveText('Swag Labs');
+    const firstItemName = await page.locator('.inventory_item_name ').first().innerText();
+    expect(firstItemName).toBe('Sauce Labs Backpack');
     await page.waitForTimeout(5000);
 
 
