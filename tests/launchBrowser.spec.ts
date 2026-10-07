@@ -1,6 +1,6 @@
 import {test,expect,chromium} from '@playwright/test';
 
-test('Open browser', async({})=>{
+test('Open chromium browser', async({})=>{
 
     const browser = await chromium.launch();
     const context = await browser.newContext();
